@@ -17,6 +17,18 @@ public void setup()
 public boolean palindrome(String word)
 {
   //your code here
+  String word2= new String();
+  
+  for(int i=word.length()-1; i>=0;i--)
+  {
+    
+    word2=word2+ word.substring(i,i+1);
+    println("word2: "+word2);
+    if (word2.equals(word))
+    {
+      return true; 
+    }
+  }
   return false;
 }
 
