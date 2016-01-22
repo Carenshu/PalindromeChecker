@@ -18,13 +18,23 @@ public boolean palindrome(String word)
 {
   //your code here
   String word2= new String();
-  
-  for(int i=word.length()-1; i>=0;i--)
+  String word3=new String();
+  for (int i=0;i<word.length();i++)
+  {
+    if (Character.isLetter(word.charAt(i))==true)
+    {
+      word2=word2+word.substring(i,i+1);
+      word2= word2.toLowerCase();
+    }
+  }
+ 
+
+  for(int i=word2.length()-1; i>=0;i--)
   {
     
-    word2=word2+ word.substring(i,i+1);
-    println("word2: "+word2);
-    if (word2.equals(word))
+    word3=word3+ word2.substring(i,i+1);
+    //println("word2: "+word2);
+    if (word3.equals(word2))
     {
       return true; 
     }
